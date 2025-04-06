@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: radial-gradient(circle, #555 0%, #333 100%);
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: sans-serif;
+  }
+  
+  .click-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+  }
+  #left-area {
+    left: 0;
+  }
+  #right-area {
+    right: 0;
+  }
+  
+  #coin-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    perspective: 1000px;
+  }
+  
+  #coin {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .frente {
+    background-image: url('cara.png');
+    transform: rotateY(0deg);
+  }
+  
+  .verso {
+    background-image: url('coroa.png');
+    transform: rotateY(180deg);
+  }
+  
+  #mute-btn {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    padding: 8px 16px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  #mute-btn:hover {
+    opacity: 1;
+  }
+  
+  
